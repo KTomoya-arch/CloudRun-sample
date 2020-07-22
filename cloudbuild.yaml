@@ -1,6 +1,7 @@
 steps:
   - name: "gcr.io/cloud-builders/go"
     args: ["test","."]
+    env: ["GOPATH=."]
     id: Test
   - name: gcr.io/cloud-builders/docker
     args:
