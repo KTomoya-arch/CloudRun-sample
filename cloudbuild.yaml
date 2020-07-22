@@ -1,6 +1,5 @@
 steps:
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
-  args:
-    - gcloud secrets versions access latest --secret=test
+  args: [ '-c', 'gcloud secrets versions access latest --secret=test']
   id: secret
-  entrypoint: gcloud
+  entrypoint: bash'
